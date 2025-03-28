@@ -1,0 +1,138 @@
+<div class="hero-section d-flex flex-column align-items-left text-white">
+    <!-- Шапка-меню -->
+    <nav class="navbar navbar-expand-lg navbar-dark w-100">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <!-- Логотип + Текст "StudentsBook" -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="assets/images/logo-sb.png" alt="Logo" class="logo" />
+          <h5 class="ms-2 mb-0 brand-text">StudentsBook</h5>
+        </a>
+  
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#heroNav"
+          aria-controls="heroNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div id="heroNav" class="collapse navbar-collapse justify-content-between">
+          <!-- Навигационные ссылки справа -->
+          <ul class="navbar-nav ms-auto gap-4">
+            <li class="nav-item">
+              <a class="nav-link" href="#stats">О нас</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#orgs">Организации</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#reviews">Отзывы</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Контакты</a>
+            </li>
+          </ul>
+  
+          <!-- Кнопки Войти и Подать заявку -->
+          <div class="d-flex align-items-center gap-4">
+            <a href="#" class="btn btn-outline-light btn-login">Войти</a>
+            <a href="#" class="btn btn-primary btn-apply">Подать заявку</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  
+  <!-- Заголовок + Фильтр поиска -->
+  <div class="search-section container-fluid py-4">
+    <h2 class="text-left mb-4"><span class="orange-text">Организации</span> для прохождения практики</h2>
+    <div class="container d-flex flex-column flex-md-row gap-3 justify-content-start">
+        <div class="form-group d-flex flex-column">
+          <label for="orgName" class="mb-2 fw-semibold">Название или ключевые слова</label>
+          <input type="text" id="orgName" placeholder="Введите название..." class="form-control">
+        </div>
+        <div class="form-group d-flex flex-column">
+          <label for="city" class="mb-2 fw-semibold">Город</label>
+          <input type="text" id="city" placeholder="Введите город..." class="form-control">
+        </div>
+      </div>
+      
+  </div>
+  
+  <!-- Сетка карточек -->
+  <div class="organizations-section">
+    <div class="organizations-grid">
+      <!-- Пример нескольких карточек -->
+      <div class="flip-card" *ngFor="let item of [1,2,3,4,5,6,7,8,9]">
+        <div class="flip-card-inner">
+          <!-- Передняя сторона (Название организации) -->
+          <div class="flip-card-front">
+            <h5 class="organization-title">
+              РГП на ПХВ «Дирекция административных зданий Администрации Президента и Правительства РК» УДП РК
+            </h5>
+          </div>
+          <!-- Задняя сторона (Описание + Кнопки) -->
+          <div class="flip-card-back">
+            <p class="organization-text">Краткое описание организации</p>
+            <div class="btn-group">
+              <a href="#" class="btn btn-primary">Подать заявку</a>
+              <a href="#" class="btn btn-outline-primary">Узнать больше</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Добавь карточек, сколько надо -->
+    </div>
+  
+    <div class="text-center mt-4">
+      <button class="btn btn-secondary more-btn">Посмотреть еще</button>
+    </div>
+  </div>
+  
+  <!-- Секция заявки (аналог contact-us) -->
+  <div class="apply-section">
+    <div class="row w-100">
+      <!-- Левая часть — форма -->
+      <div class="col-md-5">
+        <h2>Оставить заявку в <span class="orange-text">организацию</span></h2>
+        <p>Пожалуйста, введите данные о себе и о выбранной организации</p>
+        <form>
+          <div class="mb-3">
+            <label for="orgData" class="form-label fw-semibold">Название организации</label>
+            <textarea id="orgData" rows="2" placeholder="Опишите, какую организацию вы ищете и по каким критериям..." class="form-control"></textarea>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <label for="contactName" class="form-label fw-semibold">Контактное лицо</label>
+              <input type="text" id="contactName" placeholder="Введите ФИО" class="form-control">
+            </div>
+            <div class="col">
+              <label for="contactPhone" class="form-label fw-semibold">Телефон</label>
+              <input type="text" id="contactPhone" placeholder="Введите номер телефона" class="form-control">
+            </div>
+          </div>
+          <button class="btn btn-primary">Отправить заявку</button>
+        </form>
+      </div>
+  
+      <!-- Центральный отступ -->
+      <div class="col-md-2"></div>
+  
+      <!-- Правая часть — изображение -->
+      <div class="col-md-5 d-flex justify-content-center align-items-center">
+        <img src="assets/images/sent-message.png" alt="Contact us" class="img-fluid rounded shadow-sm" style="max-width: 75%; height: auto;">
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Футер -->
+  <app-main-footer></app-main-footer>
+  

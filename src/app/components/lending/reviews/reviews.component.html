@@ -1,0 +1,22 @@
+<div class="reviews-section">
+  <div class="text-center">
+    <h2 class="reviews-title"><span class="orange-text">Ваши впечатления</span> – наша мотивация!</h2>
+    <p class="reviews-subtitle">Студенты, прошедшие практику делятся своими историями успеха</p>
+  </div>
+
+  <div class="reviews-grid">
+    <div class="review-card" *ngFor="let review of reviews">
+      <div class="review-image">
+        <img [src]="review.photo" [alt]="review.name">
+      </div>
+      <div class="review-content">
+        <p class="review-quote">“{{ review.title }}”</p>
+        <p class="review-text">{{ review.text }}</p>
+        <div class="review-author">
+          <p class="name">{{ review.name }}</p>
+          <p class="role">{{ review.role }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

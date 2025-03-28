@@ -1,0 +1,259 @@
+/* Hero Section */
+.hero-section {
+    padding: 30px 110px;
+  }
+  
+  /* Логотип */
+  .logo {
+    max-height: 56px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) saturate(50%) invert(65%) sepia(50%) saturate(1000%) hue-rotate(350deg) brightness(100%) contrast(50%);
+
+  }
+
+  
+  /* Текст StudentsBook */
+  .brand-text {
+    font-size: 24px;
+    font-weight: normal;
+    color: black;
+  }
+  
+  /* Навигация */
+  .navbar-nav {
+    gap: 20px;
+  }
+  .nav-link{
+    color: black;
+  }
+  
+  /* Кнопки */
+  .btn-login {
+    margin-left: 1rem;
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-size: 16px;
+    border: 1px solid #007bff;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: rgb(233, 233, 233);
+      color: #007bff;
+    }
+  }
+  
+  .btn-apply {
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-size: 16px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+  
+  /* Секция поиска */
+  .search-section {
+    background: #FAFAFA;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    padding: 30px 110px;
+    margin-bottom: 50px;
+    align-items: flex-start;
+    
+
+
+  
+    h2 {
+      font-family: 'Mulish', sans-serif;
+      font-weight: 700;
+      font-size: 34px;
+      color: #000000;
+    }
+  
+    label {
+      font-family: 'Mulish', sans-serif;
+    }
+  
+    .form-control {
+      border-radius: 15px;
+    }
+  }
+
+  .search-section .container {
+    margin-left: 0 !important;
+  }
+  
+  /* Организации */
+  .organizations-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 110px;
+    gap: 32px;
+    background: #ffffff;
+  }
+  
+  /* Сетка карточек */
+  .organizations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .flip-card {
+    background-color: transparent;
+    width: 100%;
+    max-width: 450px;
+    min-width: 250px;
+    height: 200px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Переворот при hover */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Передняя и задняя стороны */
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Передняя сторона */
+  .flip-card-front {
+    background: #f8f9fa;
+    padding: 16px;
+  }
+  
+  /* Задняя сторона */
+  .flip-card-back {
+    background: #fff;
+    color: rgb(71, 71, 71);
+    transform: rotateY(180deg);
+    flex-direction: column;
+    padding: 16px;
+    gap: 10px;
+  }
+  
+  /* Текст задней */
+  .organization-text {
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 280px;
+  }
+  
+/* Кнопки на задней стороне */
+.btn-group {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Кнопки теперь закруглённые */
+  .btn-primary,
+  .btn-outline-primary {
+    width: auto;
+    height: auto;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  
+  /* Переопределяем поведение Bootstrap внутри btn-group */
+  .btn-group .btn {
+    border-radius: 50px !important;
+  }
+  
+  /* Заголовок карточки */
+  .organization-title {
+    font-family: 'Mulish', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #212121;
+    padding: 2rem;
+  }
+  
+  /* Адаптация */
+  @media (max-width: 1024px) {
+    .organizations-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .organizations-section {
+      padding: 30px;
+    }
+  
+    .organizations-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .flip-card {
+      max-width: 100%;
+    }
+  }
+  
+  .apply-section {
+    padding: 50px 110px;
+    background: #ffffff;
+    margin: 0; // убрали все margin
+  
+    h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+  
+    p {
+      font-size: 16px;
+      color: #333;
+    }
+  
+    .form-control {
+      border-radius: 8px;
+      font-size: 16px;
+    }
+  
+    button.btn.btn-primary {
+      margin-top: 20px;
+      border-radius: 30px;
+      padding: 10px 25px;
+      font-size: 16px;
+    }
+  }
+  
+  /* Футер */
+  @media (max-width: 768px) {
+    .apply-section {
+      padding: 30px;
+    }
+  }
+  

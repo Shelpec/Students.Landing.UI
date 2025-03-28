@@ -1,0 +1,113 @@
+.steps-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 110px; /* Одинаковые отступы слева и справа */
+  gap: 20px;
+  background: #fff;
+  max-width: 100%;
+}
+
+/* Картинка */
+.steps-image {
+  max-width: 40px;
+  height: 866px;
+  width: 100%;
+}
+
+/* Оформление шагов */
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid orangered;
+  padding: 20px;
+  border-radius: 10px;
+  width: 480px; /* Фиксированная ширина */
+  min-height: 150px; /* Одинаковая высота */
+}
+
+/* Отступы между шагами */
+.step:not(:first-child) {
+  margin-top: 225px;
+}
+
+/* Увеличенный отступ только для блока "Подайте заявку" */
+.step-large-gap {
+  margin-top: 150px !important;
+}
+/* Заголовок блока */
+.step-title {
+  width: 450px;
+  height: 30px;
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #212121;
+  align-self: stretch;
+  margin-bottom: 1.5rem;
+}
+
+/* Основной текст блока */
+.step-text {
+  width: 450px;
+  height: 75px;
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  color: #212121;
+  align-self: stretch;
+}
+
+/* Убираем лишние margin */
+.row {
+  margin: 0 !important;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .steps-section {
+    padding: 30px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-5, .col-md-2 {
+    width: 100%;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+/* Картинка */
+.steps-image {
+  max-width: 0px;
+  height: 0px;
+  width: 0%;
+}
+
+  .step {
+    width: 100%;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  /* Уменьшаем отступы на мобильных */
+  .step:not(:first-child) {
+    margin-top: 100px;
+  }
+
+  .step-large-gap {
+    margin-top: 150px !important; /* Уменьшенный отступ для мобильных */
+  }
+}
