@@ -1,0 +1,56 @@
+/* Можно переопределить какие-то отдельные стили именно для компонента «Подача заявки» */
+.apply-section {
+  padding: 40px 0;
+
+  .apply-note {
+    font-size: 16px;
+    color: #757575; /* Gray/600 */
+    margin-bottom: 20px;
+  }
+
+  .card {
+    border-radius: 24px;
+    box-shadow: 0px 0px 20px 5px #f2f2f2;
+    border: none;
+  }
+  .form-label{
+    padding-left: 1rem;
+  }
+
+  .card-body {
+    padding: 30px;
+    font-size: 30px;
+  }
+
+  .section-title {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #ff6f61; /* coral/500 */
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .apply-title{
+    font-family: 'Mulish', sans-serif;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  .btn-submit {
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+/* Адаптация под мобильные */
+@media (max-width: 768px) {
+  .apply-section {
+    padding: 20px;
+
+    .card-body {
+      padding: 20px;
+    }
+  }
+}

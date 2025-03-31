@@ -1,0 +1,55 @@
+<div class="hero-section d-flex flex-column align-items-left text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark w-100">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <!-- Логотип -->
+        <a class="navbar-brand d-flex align-items-center" href="/">
+          <img src="assets/images/logo-sb.png" alt="Logo" class="logo" />
+          <h5 class="ms-2 mb-0 brand-text">StudentsBook</h5>
+        </a>
+  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#heroNav"
+          aria-controls="heroNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div id="heroNav" class="collapse navbar-collapse justify-content-between">
+          <!-- Навигационные ссылки -->
+          <ul class="navbar-nav ms-auto gap-4">
+            <li class="nav-item"><a class="nav-link" href="#stats">О нас</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/all-organizations">Организации</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="#reviews">Отзывы</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+          </ul>
+  
+          <!-- Кнопки -->
+          <div class="d-flex align-items-center gap-4">
+            <!-- login -->
+            <button
+              *ngIf="!authService.isLoggedIn"
+              class="btn btn-outline-light btn-login"
+              (click)="goToLogin()"
+            >
+              Войти
+            </button>
+  
+            <!-- profile -->
+            <img
+              *ngIf="authService.isLoggedIn"
+              src="assets/images/user-icon.png"
+              class="rounded-circle"
+              width="40"
+              height="40"
+              alt="User"
+              style="cursor: pointer"
+              (click)="goToProfile()"
+            />
+  
+            <!-- подать заявку -->
+            <button class="btn btn-primary btn-apply" (click)="goToApply()">Подать заявку</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  

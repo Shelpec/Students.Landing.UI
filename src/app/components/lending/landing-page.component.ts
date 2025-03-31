@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 // Импорт всех секций лендинга
-import { HeroSectionComponent } from '../lending/hero-section/hero-section.component';
 import { AboutStatsComponent } from '../lending/about-stats/about-stats.component';
 import { StepsComponent } from '../lending/steps/steps.component';
 import { OrganizationsComponent } from '../lending/organizations/organizations.component';
@@ -11,13 +10,13 @@ import { FaqComponent } from '../lending/faq/faq.component';
 import { ReviewsComponent } from '../lending/reviews/reviews.component';
 import { ContactUsComponent } from '../lending/contact-us/contact-us.component';
 import { MainFooterComponent } from '../main-footer/main-footer.component';
+import { HeroSectionComponent } from './hero-section/hero-section.component';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
   imports: [
     CommonModule,
-    HeroSectionComponent,
     AboutStatsComponent,
     StepsComponent,
     OrganizationsComponent,
@@ -25,8 +24,9 @@ import { MainFooterComponent } from '../main-footer/main-footer.component';
     FaqComponent,
     ReviewsComponent,
     ContactUsComponent,
-    MainFooterComponent
-  ],
+    MainFooterComponent,
+    HeroSectionComponent
+],
   template: `
     <div id="hero"><app-hero-section></app-hero-section></div>
     <div id="stats"><app-about-stats></app-about-stats></div>

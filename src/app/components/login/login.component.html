@@ -1,0 +1,47 @@
+<div class="auth-container">
+  <div class="navbar">
+    <div class="logo">
+      <img src="assets/images/logo-sb.png" alt="Logo" />
+      <span class="brand-name">StudentsBook</span>
+    </div>
+  </div>
+
+  <div class="auth-content">
+    <div class="auth-box">
+      <div class="auth-header">
+        <h2>Войти</h2>
+        <p>У вас нет личного аккаунта? <a href="#">Зарегистрируйтесь!</a></p>
+      </div>
+
+      <div class="login-inputs">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="example@email.com" />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Пароль</label>
+          <input id="password" type="password" placeholder="Введите пароль" />
+        </div>
+      </div>
+
+      <div class="login-options">
+        <label><input type="checkbox" /> Запомнить</label>
+        <a href="#">Забыли пароль?</a>
+      </div>
+
+      <button class="login-button">Войти</button>
+
+      <div class="login-social">
+        <p>войти с помощью</p>
+        <button class="btn btn-outline-danger" (click)="loginWithGoogle()">
+          <img src="assets/images/google-icon.png" alt="Google" style="width: 30px;" />
+        </button>
+      </div>
+    </div>
+
+    <div class="auth-illustration">
+      <img src="assets/images/tablet-login.png" alt="Login Illustration" />
+    </div>
+  </div>
+</div>

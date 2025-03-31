@@ -1,13 +1,26 @@
-import { enableProdMode } from '@angular/core';
+// src/main.ts
+
 import { bootstrapApplication } from '@angular/platform-browser';
+import { importProvidersFrom } from '@angular/core';
+import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
+import { provideRouter } from '@angular/router';
 import { AppComponent } from './app/app.component';
 
-// Подключаем роутинг
-import { provideRouter } from '@angular/router';
-import { appRoutes } from './app/app.routes'; // <-- наши маршруты
+// 🔐 Интерсептор для токена
+import { AuthInterceptor } from './app/interceptors/auth.interceptor';
+import { appRoutes } from './app/app.routes';
 
 bootstrapApplication(AppComponent, {
   providers: [
-    provideRouter(appRoutes)
+    importProvidersFrom(HttpClientModule),
+
+    provideRouter(appRoutes),
+
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
   ]
-}).catch(err => console.error(err));
+})
+.catch(err => console.error(err));

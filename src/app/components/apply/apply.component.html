@@ -1,0 +1,243 @@
+<!-- Шапка -->
+<app-main-header></app-main-header>
+
+<!-- Основная секция -->
+<div class="apply-section container">
+  <h2 class="apply-title"><span class="orange-text">Заявка</span> на прохождение практики</h2>
+  
+  <!-- Небольшой отступ и уведомление -->
+  <p class="apply-note">
+    Пожалуйста зарегистрируйтесь или войдите, чтобы заполнить эту форму.
+  </p>
+
+  <!-- Весь контент в карточке -->
+  <div class="card shadow-sm mb-5">
+    <div class="card-body">
+      <form (submit)="onSubmit()">
+        <!-- Блок: О себе -->
+        <h3 class="section-title">О себе</h3>
+
+        <!-- Фамилия, Имя, Отчество -->
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <label for="lastName" class="form-label">Фамилия</label>
+            <input
+              type="text"
+              id="lastName"
+              class="form-control input-field"
+              placeholder="Введите фамилию"
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="firstName" class="form-label">Имя</label>
+            <input
+              type="text"
+              id="firstName"
+              class="form-control input-field"
+              placeholder="Введите имя"
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="middleName" class="form-label">Отчество</label>
+            <input
+              type="text"
+              id="middleName"
+              class="form-control input-field"
+              placeholder="Введите отчество"
+            />
+          </div>
+        </div>
+
+        <!-- Дата рождения, Пол -->
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="birthDate" class="form-label">Дата рождения</label>
+            <input
+              type="date"
+              id="birthDate"
+              class="form-control input-field"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="gender" class="form-label">Пол</label>
+            <select id="gender" class="form-select input-field">
+              <option value="">Выберите...</option>
+              <option value="male">Мужской</option>
+              <option value="female">Женский</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Знание языков, Личные интересы -->
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <label for="langs" class="form-label">Знание языков</label>
+            <input
+              type="text"
+              id="langs"
+              class="form-control input-field"
+              placeholder="Например: русский, английский"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="interests" class="form-label">Личные интересы</label>
+            <input
+              type="text"
+              id="interests"
+              class="form-control input-field"
+              placeholder="Например: программирование, дизайн"
+            />
+          </div>
+        </div>
+
+        <!-- Блок: Образование -->
+        <h3 class="section-title">Образование</h3>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="university" class="form-label">Учебное заведение</label>
+            <input
+              type="text"
+              id="university"
+              class="form-control input-field"
+              placeholder="Название ВУЗа / колледжа"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="specialty" class="form-label">Специальность</label>
+            <input
+              type="text"
+              id="specialty"
+              class="form-control input-field"
+              placeholder="Например: информационные системы"
+            />
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <label for="admissionYear" class="form-label">Год поступления</label>
+            <input
+              type="date"
+              id="admissionYear"
+              class="form-control input-field"
+              placeholder="2020"
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="graduationYear" class="form-label">Год окончания</label>
+            <input
+              type="date"
+              id="graduationYear"
+              class="form-control input-field"
+              placeholder="2024"
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="gpa" class="form-label">GPA (текущий / итоговый)</label>
+            <input
+              type="text"
+              id="gpa"
+              class="form-control input-field"
+              placeholder="Например: 3.5"
+            />
+          </div>
+        </div>
+
+        <!-- Блок: Практика -->
+        <h3 class="section-title">Практика</h3>
+        <div class="row mb-3">
+          <div class="col-12">
+            <label for="organization" class="form-label">Организация</label>
+            <input
+              type="text"
+              id="organization"
+              class="form-control input-field"
+              placeholder="Название компании / учреждения"
+            />
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <label for="practiceType" class="form-label">Вид практики</label>
+            <input
+              type="text"
+              id="practiceType"
+              class="form-control input-field"
+              placeholder="Например: производственная"
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="startPractice" class="form-label">Дата начала</label>
+            <input
+              type="date"
+              id="startPractice"
+              class="form-control input-field"
+            />
+          </div>
+          <div class="col-md-4">
+            <label for="endPractice" class="form-label">Дата окончания</label>
+            <input
+              type="date"
+              id="endPractice"
+              class="form-control input-field"
+            />
+          </div>
+        </div>
+
+        <!-- Блок: Контакты -->
+        <h3 class="section-title">Контакты</h3>
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <label for="phone" class="form-label">Номер телефона</label>
+            <input
+              type="text"
+              id="phone"
+              class="form-control input-field"
+              placeholder="+7 (___) ___-__-__"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">Электронная почта</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control input-field"
+              placeholder="example@mail.com"
+            />
+          </div>
+        </div>
+
+        <!-- Блок: Документы -->
+        <h3 class="section-title">Документы</h3>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="photo" class="form-label">Ваша фотография</label>
+            <input
+              type="file"
+              id="photo"
+              class="form-control input-field"
+              accept="image/*"
+            />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="studentId" class="form-label">Студенческий билет</label>
+            <input
+              type="file"
+              id="studentId"
+              class="form-control input-field"
+            />
+          </div>
+        </div>
+
+        <!-- Кнопка отправки -->
+        <div class="text-end">
+          <button type="submit" class="btn btn-primary btn-submit">
+            Отправить
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Футер -->
+<app-main-footer></app-main-footer>

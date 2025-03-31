@@ -1,15 +1,16 @@
-
 import { Routes } from '@angular/router';
 import { LandingPageComponent } from './components/lending/landing-page.component';
 import { AllOrganizationsComponent } from './components/allorganization/all-organizations.component';
+import { LoginComponent } from './components/login/login.component';
+import { AuthCallbackComponent } from './components/auth-callback/auth-callback/auth-callback.component';
+import { ApplyComponent } from './components/apply/apply.component';
 
-// Импортируем наши страницы
 
 export const appRoutes: Routes = [
-  // Главная страница (лендинг)
   { path: '', component: LandingPageComponent },
-  // Страница all-organizations
   { path: 'all-organizations', component: AllOrganizationsComponent },
-  // Пример страницы 404, если нужно
+  { path: 'login', component: LoginComponent },
+  { path: 'auth/callback', component: AuthCallbackComponent },
+  { path: 'apply',component: ApplyComponent,},
   { path: '**', redirectTo: '' }
 ];
